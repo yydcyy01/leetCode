@@ -12,10 +12,10 @@ import java.util.function.BiPredicate;
 public class BinarySearch {
     private BinarySearch(){}
 
-    public static int binarySearch(Comparable[] arr, int n, Comparable target){
+    /*public static int binarySearch(Comparable[] arr, int n, Comparable target){
         int L = 0, R = n - 1; // [l , r ]间
 
-        while (L <= R){ // L == R 时, [L...R]依然有效
+        while (L <= R){ // L == R 时, [L...R]依然有效  [14,14] , R 为有效值. 否则14 就被漏了
             int mid = (R - L) / 2 + L;
             int comp = arr[mid].compareTo(target);
             if (comp == 0)
@@ -27,10 +27,27 @@ public class BinarySearch {
         }
 
         return -1; // 非法情况
+    }*/
+    public static int binarySearch(Comparable[] arr, int n, Comparable target){
+        int L = 0, R = n; // [l , r) 间 L 为有效值, R 不为有效值, 为边界    对应二分过程中, R = mid 即可, 不需要 + 1
+
+        while (L < R){
+            int mid = (R - L) / 2 + L;
+            int comp = arr[mid].compareTo(target);
+            if (comp == 0)
+                return mid;
+            if (comp > 0)
+                R = mid; // 取 mid, 而不是 mid - 1
+            else // comp < 0
+                L = mid + 1;
+        }
+
+        return -1; // 非法情况
     }
 
     public static void main(String[] args) {
         int  n = (int) Math.pow(10, 7);
+        //int  n = 10;
         Integer data[] = Util.generateOrderedArray(n);
 
         long startTime = System.currentTimeMillis();
