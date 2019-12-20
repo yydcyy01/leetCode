@@ -1,5 +1,8 @@
 package cn.yydcyy._3._9;
 
+/**
+ * 122
+ */
 class Solution {
     // 直接买卖, 这题不难
     public int maxProfit(int[] prices) {
