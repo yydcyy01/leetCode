@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * LC 462
+ 先排序, 复杂度 : O (n log n )
  相遇问题, 每次最多 ++ -- , 问移动多少次可以把所以元素变成全相同.
  nums[R] - nums[L] = (nums[R] - N) + (N - nums[L] );
 */
