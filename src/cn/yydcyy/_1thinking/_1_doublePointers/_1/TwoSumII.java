@@ -1,9 +1,14 @@
 package cn.yydcyy._1thinking._1_doublePointers._1;
 
 /**
-LeetCode 167. 两数之和 II - 输入有序数组
+ 167. Two Sum II - Input array is sorted (Easy)
+ 注意返回结果 : int[]. 使用 new int[]{1,2};
+
+ 题目描述：在有序数组中找出两个数，使它们的和为 target。
+
+ 数组中的元素最多遍历一次，时间复杂度为 O(N)。只使用了两个额外变量，空间复杂度为 O(1)。
 */
-class Solution {
+class TwoSumII {
     public int[] twoSum(int[] numbers, int target) {
         int [] res = new int[2];
         int i = 0;
