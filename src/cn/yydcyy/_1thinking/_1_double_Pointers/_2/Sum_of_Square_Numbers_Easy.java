@@ -1,7 +1,9 @@
-package cn.yydcyy._1thinking._1_doublePointers._2;
+package cn.yydcyy._1thinking._1_double_Pointers._2;
 
 /**
  633. Sum of Square Numbers (Easy)
+Time O(sqrt(target)), Space : O(1)
+
  Input: 5
  Output: True
  Explanation: 1 * 1 + 2 * 2 = 5
@@ -15,7 +17,7 @@ package cn.yydcyy._1thinking._1_doublePointers._2;
 
  因为最多只需要遍历一次 0~sqrt(target)，所以时间复杂度为 O(sqrt(target))。又因为只使用了两个额外的变量，因此空间复杂度为 O(1)。
 */
-class SumOfSquareNumbers {
+class Sum_of_Square_Numbers_Easy {
     public boolean judgeSquareSum(int c) {
         if (c == 0) return true; // 0 * 0 = 0
 

@@ -1,12 +1,14 @@
-package cn.yydcyy._1thinking._1_doublePointers._7;
+package cn.yydcyy._1thinking._1_double_Pointers._7;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * LC 524
+ *  Longest Word in Dictionary through Deleting (Medium)
+ *   LongestWordInDictionaryThroughDeleting (Medium)
  */
-class Solution {
+class Longest_Word_In_Dictionary_Through_Deleting_Medium {
     public String findLongestWord(String s, List<String> d) {
         String res = ""; // 记录结果
 
@@ -16,7 +18,7 @@ class Solution {
             int l2 = temp.length(); // 这个别写错了撒
 
             if (l1 > l2 || (l1 == l2 && res.compareTo(temp) < 0) ) {
-                // 处理边界 ① l1 比tmep 长 ② l1 比 temp 字典序小 则此结果不予考虑, 直接优化跳过
+                // 处理边界 ① l1 比tmep 长 ② l1 比 temp 字典序小,优化为即使相同直接跳过
                 continue;
             }
             //此方法判断是 s 与 temp 比较.
@@ -26,7 +28,7 @@ class Solution {
         }
         return res;
     }
-
+    //s 为 app 字典,temp 为 aoopp判断.
     public boolean isVaild(String s, String temp){
         int i = 0; // 记录 s 长度
         int j = 0; // 记录 temp 长度
@@ -40,7 +42,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        Longest_Word_In_Dictionary_Through_Deleting_Medium s = new Longest_Word_In_Dictionary_Through_Deleting_Medium();
         List<String> list = new ArrayList<>();
         list.add("ale");
         list.add( "apple");
