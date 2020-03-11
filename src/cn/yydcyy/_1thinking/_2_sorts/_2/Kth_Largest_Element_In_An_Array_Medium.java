@@ -1,6 +1,18 @@
 package cn.yydcyy._1thinking._2_sorts._2;
 
 /**
+ * 215. Kth Largest Element in an Array (Medium)
+ 题目描述：找到倒数第 k 个的元素。
+ *
+ * 排序 ：时间复杂度 O(NlogN)，空间复杂度 O(1)
+ *
+ * Input: [3,2,1,5,6,4] and k = 2
+ * Output: 5
+ */
+
+import java.util.PriorityQueue;
+
+/**
  * 快排 : 直接排序, 干!
  *  Time O (n log n);
  *  Space O (1);
@@ -36,12 +48,24 @@ class Solution {
         return pq.peek();
     }
 }*/
-class Solution {
-    public int findKthLargest(int[] nums, int k) {
-        k = nums.length - k; // 有效值
-        int l = 0;  // 记录左边界起始有效值
-        int h = nums.length - 1; // 记录右边界起始有效值
 
+
+class Kth_Largest_Element_In_An_Array_Medium {
+    // 堆排序实现 默认最小堆, 堆顶是最小元素
+    public int findKthLargest2(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int i = 0; i < nums.length; i ++) {
+            pq.add(nums[i]);
+            if (pq.size() > k)
+                pq.poll();
+        }
+        return pq.peek();
+    }
+
+
+    public int findKthLargest(int[] nums, int k) {
+        k = nums.length - k;
+        int l = 0, h = nums.length - 1;
         while (l < h) {
             int j = partition(nums, l, h);
             if (j == k) {
@@ -55,45 +79,34 @@ class Solution {
         return nums[k];
     }
 
-    /**
-     * i, l, j, h 都是有效值下标, swap()时直接传 i, j, l, h 即可, 不要传nums[i] 啥的.
-     * @param nums
-     * @param l
-     * @param h
-     * @return
-     */
-    public int partition(int[] nums, int l, int h){
-        int i = l + 1; //
-        int j = h; // 有效值
-        int part = nums[l];
-        while (i < j) {
-            while (i < j && nums[i] < part) i ++;  // 找到第一个 nums[i] >= part i 下标
-            while (i < j && nums[j] > part) j --;// 找到第一个 nums[j] <= part j 下标
-            if (i < j) {
-                swap(nums, i, j);
+    private int partition(int[] a, int l, int h) {
+        int i = l, j = h + 1;
+        while (true) {
+            while (a[++i] < a[l] && i < h) ;
+            while (a[--j] > a[l] && j > l) ;
+            if (i >= j) {
+                break;
             }
+            swap(a, i, j);
         }
-        swap(nums, l, j); // part放入中间
+        swap(a, l, j);
         return j;
     }
 
-    /**
-     * 交换 nums 数组中 i, j
-     * @param nums
-     * @param i
-     * @param j
-     */
-    public void swap(int[] nums, int i, int j){
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+    private void swap(int[] a, int i, int j) {
+        int t = a[i];
+        a[i] = a[j];
+        a[j] = t;
     }
 
     public static void main(String[] args) {
-        Solution s = new Solution();
+        Kth_Largest_Element_In_An_Array_Medium s = new Kth_Largest_Element_In_An_Array_Medium();
         int[] nums = new int[]{7,6,5,4,3,2,1};
 
         System.out.println(s.findKthLargest(nums, 5));
         System.out.println();
+
     }
 }
+
+

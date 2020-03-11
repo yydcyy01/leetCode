@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._6;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 import com.yydcyy.list.utils.ListNode;
 /**
@@ -20,7 +20,7 @@ import com.yydcyy.list.utils.ListNode;
  *     }
  * }
  */
-public class Linked_List_Cycle {
+public class _6_Linked_List_Cycle {
     public boolean hasCycle(ListNode head) {
         if (head == null) {
             return false;

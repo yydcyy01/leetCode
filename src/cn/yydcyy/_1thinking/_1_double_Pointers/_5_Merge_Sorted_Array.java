@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._5;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 /**
  * 归并两个有序数组
@@ -6,7 +6,7 @@ package cn.yydcyy._1thinking._1_double_Pointers._5;
  * 题目描述：把归并结果存到第一个数组上
  * 需要从尾开始遍历，否则在 nums1 上归并得到的值会覆盖还未进行归并比较的值。
  */
-class Merge_Sorted_Array {
+class _5_Merge_Sorted_Array {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int index1 = m - 1, index2 = n - 1;

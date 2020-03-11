@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._3;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -16,7 +16,7 @@ Time O(N)元音字母查找hash 效率 O(1) Space O(n)
 ② 
 需要查找匹配一个数组时 [比如此题中预先定义的元音数组集合], 用"时间换空间" HashSet 的 contains()方法. 
 */
-class Reverse_Vowels_of_a_String {
+class _3_Reverse_Vowels_of_a_String {
     HashSet<Character> vowels = new HashSet<>(Arrays.asList('a','e','i','o','u','A','E','I','O','U'));
     public String reverseVowels(String s) {
         if (s.length() == 0 || s == "") return s;

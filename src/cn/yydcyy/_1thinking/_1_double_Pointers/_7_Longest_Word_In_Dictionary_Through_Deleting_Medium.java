@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._7;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  *  Longest Word in Dictionary through Deleting (Medium)
  *   LongestWordInDictionaryThroughDeleting (Medium)
  */
-class Longest_Word_In_Dictionary_Through_Deleting_Medium {
+class _7_Longest_Word_In_Dictionary_Through_Deleting_Medium {
     public String findLongestWord(String s, List<String> d) {
         String res = ""; // 记录结果
 
@@ -42,7 +42,7 @@ class Longest_Word_In_Dictionary_Through_Deleting_Medium {
     }
 
     public static void main(String[] args) {
-        Longest_Word_In_Dictionary_Through_Deleting_Medium s = new Longest_Word_In_Dictionary_Through_Deleting_Medium();
+        _7_Longest_Word_In_Dictionary_Through_Deleting_Medium s = new _7_Longest_Word_In_Dictionary_Through_Deleting_Medium();
         List<String> list = new ArrayList<>();
         list.add("ale");
         list.add( "apple");

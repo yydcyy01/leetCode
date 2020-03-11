@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._4;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 /**
  * 回文字符串
@@ -10,7 +10,7 @@ package cn.yydcyy._1thinking._1_double_Pointers._4;
 
  在试着删除字符时，我们既可以删除左指针指向的字符，也可以删除右指针指向的字符。
 */
-class Valid_PalindromeII {
+class _4_Valid_PalindromeII {
     public boolean validPalindrome(String s) {
         // 题目说了"给定一个非空字符串 s", 不需要边界处理了.
         for (int i = 0, j = s.length() - 1; i <= j; i ++, j -- ) {

@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._2;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 /**
  633. Sum of Square Numbers (Easy)
@@ -17,7 +17,7 @@ Time O(sqrt(target)), Space : O(1)
 
  因为最多只需要遍历一次 0~sqrt(target)，所以时间复杂度为 O(sqrt(target))。又因为只使用了两个额外的变量，因此空间复杂度为 O(1)。
 */
-class Sum_of_Square_Numbers_Easy {
+class _2_Sum_of_Square_Numbers_Easy {
     public boolean judgeSquareSum(int c) {
         if (c == 0) return true; // 0 * 0 = 0
 

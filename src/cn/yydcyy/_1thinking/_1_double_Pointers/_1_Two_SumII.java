@@ -1,4 +1,4 @@
-package cn.yydcyy._1thinking._1_double_Pointers._1;
+package cn.yydcyy._1thinking._1_double_Pointers;
 
 /**
  167. Two Sum II - Input array is sorted (Easy)
@@ -10,7 +10,7 @@ package cn.yydcyy._1thinking._1_double_Pointers._1;
 
  数组中的元素最多遍历一次，时间复杂度为 O(N)。只使用了两个额外变量，空间复杂度为 O(1)。
 */
-class Two_SumII {
+class _1_Two_SumII {
     public int[] twoSum(int[] numbers, int target) {
         int [] res = new int[2];
         int i = 0;
