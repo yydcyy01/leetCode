@@ -12,10 +12,6 @@ import java.util.*;
  *
  * Output:
  * "eert"
- *
- * Explanation:
- * 'e' appears twice while 'r' and 't' both appear once.
- * So 'e' must appear before both 'r' and 't'. Therefore "eetr" is also a valid answer.
  */
 class Sort_Characters_By_Frequency_Medium {
     public String frequencySort(String s) {
