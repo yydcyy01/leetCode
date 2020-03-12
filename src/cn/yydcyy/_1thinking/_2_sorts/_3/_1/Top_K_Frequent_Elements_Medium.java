@@ -3,7 +3,7 @@ package cn.yydcyy._1thinking._2_sorts._3._1;
 import java.util.*;
 
 /**
- * 347. Top K Frequent Elements (Medium)
+ * 347. Top_K_Frequent_Elements_Medium
  *
  * Given [1,1,1,2,2,3] and k = 2, return [1,2].
  * 设置若干个桶，每个桶存储出现频率相同的数。桶的下标表示数出现的频率，即第 i 个桶中存储的数出现的频率为 i。
@@ -14,7 +14,7 @@ import java.util.*;
  * 使用 HashMap 计数, 复写 compare 方法比较value(而不是 key)  这个行不通
  * 测试: 题目不需要返回 list 是有序的, 即: 使用 PriorityQueue 获取前 k 元素返回即可.
  */
-class Solution {
+class Top_K_Frequent_Elements_Medium {
     public List<Integer> topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> frequencyForNum = new HashMap<>();
         for (int num : nums) {
